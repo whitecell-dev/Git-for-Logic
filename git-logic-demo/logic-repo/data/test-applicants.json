@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Alice Johnson",
+    "income": 120000,
+    "credit_score": 780,
+    "employment_years": 5
+  },
+  {
+    "name": "Bob Smith", 
+    "income": 65000,
+    "credit_score": 680,
+    "employment_years": 3
+  },
+  {
+    "name": "Charlie Brown",
+    "income": 45000,
+    "credit_score": 620,
+    "employment_years": 1
+  },
+  {
+    "name": "Diana Wilson",
+    "income": 35000,
+    "credit_score": 580,
+    "employment_years": 4
+  }
+]

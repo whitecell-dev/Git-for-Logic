@@ -1,0 +1,44 @@
+metadata:
+  name: "Loan Approval Rules"
+  version: "1.0.0"
+  description: "Simple loan approval logic"
+
+rules:
+  - name: "high_value_auto_approve"
+    priority: 1
+    when: "income > 100000 && credit_score > 750"
+    then:
+      status: "approved"
+      loan_amount: "income * 5"
+      rate: "0.025"
+      reason: "High income, excellent credit"
+
+  - name: "standard_approval"
+    priority: 2
+    when: "income > 50000 && credit_score > 650 && employment_years >= 2"
+    then:
+      status: "approved" 
+      loan_amount: "income * 3"
+      rate: "0.045"
+      reason: "Meets standard criteria"
+
+  - name: "manual_review"
+    priority: 3
+    when: "income > 40000 && credit_score > 600"
+    then:
+      status: "manual_review"
+      reason: "Requires manual underwriting"
+
+  - name: "auto_reject"
+    priority: 4
+    when: "credit_score < 600"
+    then:
+      status: "rejected"
+      reason: "Credit score below minimum"
+
+  - name: "default_review"
+    priority: 999
+    when: "true"
+    then:
+      status: "manual_review"
+      reason: "Default case - manual review required"

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
