@@ -203,7 +203,7 @@ int main(int argc, char** argv) {
     
     if (strcmp(argv[1], "init") == 0) {
         repo_t* repo = NULL;
-        error_t err = repo_init("./logic-repo", &repo);
+        error_t err = repo_init(".", &repo);
         if (err != ERR_OK) {
             fprintf(stderr, "Error: %s\n", error_string(err));
             return 1;
