@@ -1,0 +1,11 @@
+metadata:
+  version: "1.0.0"
+  description: "Loan approval test"
+
+rules:
+  - name: "Always Pass"
+    priority: 1
+    when: "true"
+    then:
+      approved: true
+      message: "Test passed"
